@@ -2,12 +2,12 @@ package io.icednut.exercise;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.boot.autoconfigure.jdbc.DataSourceTransactionManagerAutoConfiguration;
-import org.springframework.boot.autoconfigure.transaction.TransactionAutoConfiguration;
-import org.springframework.context.annotation.ImportResource;
 
-@SpringBootApplication(exclude = {DataSourceTransactionManagerAutoConfiguration.class, TransactionAutoConfiguration.class})
-@ImportResource({"classpath:META-INF/database-config.xml"})
+/**
+ * @author wangeun.lee@sk.com
+ * @since 2017-02-20
+ */
+@SpringBootApplication
 public class AppMain {
 
     public static void main(String[] args) {

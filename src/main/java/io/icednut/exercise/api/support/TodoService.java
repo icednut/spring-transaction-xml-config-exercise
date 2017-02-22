@@ -14,17 +14,15 @@ import java.util.List;
  * @since 2017-02-17
  */
 @Service
-public class TodoService implements TodoServiceIf {
+public class TodoService {
 
     @Autowired
     private TodoRepository repository;
 
-    @Override
     public List<Todo> getTodos() {
         return repository.findAll();
     }
 
-    @Override
     public TodoAddResponse addTodo(Todo todo) {
         repository.save(todo);
         return TodoAddResponse.of("success", todo.getId());
