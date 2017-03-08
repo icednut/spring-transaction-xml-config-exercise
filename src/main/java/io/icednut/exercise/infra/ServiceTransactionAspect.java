@@ -11,11 +11,11 @@ import org.springframework.util.StopWatch;
  * @author wangeun.lee@sk.com
  * @since 2017-02-20
  */
-@Aspect
-@Component
+//@Aspect
+//@Component
 public class ServiceTransactionAspect {
 
-    @Around("execution(public * io.icednut.exercise.api.support..get*(..))")
+//    @Around("execution(public * io.icednut.exercise.api.support..get*(..))")
     public Object profile(ProceedingJoinPoint pjp) throws Throwable {
         StopWatch sw = new StopWatch(getClass().getSimpleName());
 
